@@ -1,0 +1,722 @@
+
+body {
+    margin: 0;
+    font-family: "Lantinghei TC", sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: #0086b3;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav * {
+    margin: 5px;
+}
+
+.icon-windows {
+    color: #ffffff;
+    font-size: 35px !important;
+    padding-left: 50px;
+}
+
+.nav-search {
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    outline: none;
+    background: url("search.png") no-repeat 2% 50% white;
+    background-size: 16px;
+    padding-left: 5px;
+}
+
+.nav-search:focus {
+    background: white;
+}
+
+.icon-people3 {
+    color: #ffffff;
+}
+
+.wrapper {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 1397px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sidebar {
+    width: 230px;
+    height: 1200px;
+    background-color: #3D3D3D;
+    color: #ffffff;
+}
+
+.user {
+    width: 100%;
+    height: auto;
+    padding: 20px 40px;
+    font: 12px "Songti TC";
+}
+
+.user * {
+    margin: 5px;
+}
+
+.user > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+}
+
+.tab {
+    font: 12px "Songti TC";
+    color: lightgray;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.tab .selected:hover {
+    background-color: #5a5b5b;
+}
+
+.tab .tr {
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    outline: none;
+}
+
+.tab .tr:hover {
+    background-color: #5a5b5b;
+    color: #ffffff;
+}
+
+.tab .col1 {
+    width: 30%;
+    text-align: right;
+}
+
+.tab .col2 {
+    padding-left: 20px;
+    width: 70%;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tab .col2-1 {
+    width: 15%;
+    text-align: left;
+}
+
+.tab .col2-2 {
+    width: 85%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.tab a {
+    text-decoration: none;
+}
+
+.content-wrap {
+    width: 1166px;
+    height: 1200px;
+    background-color: lightgray;
+    font-family: "Lantinghei TC", sans-serif;
+    color: #3D3D3D;
+    font-size: 12px;
+}
+
+.content-wrap .index-bar {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    white-space: nowrap;
+    background-color: #ffffff;
+    padding-left: 50px;
+}
+
+.content-wrap .index-bar span {
+    color: #0086b3;
+}
+
+.content {
+    padding: 0 50px;
+}
+
+.search-blanket {
+    background-color: #ffffff;
+    border: 1px solid gray;
+}
+
+.blanket1 {
+    font-size: 16px;
+    color: gray;
+    width: 100%;
+    height: 100px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.blanket1 select {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background: url("unfold.png") no-repeat scroll right center white;
+    background-size: 12px;
+    outline: none;
+    padding-right: 14px;
+}
+
+.blanket1 .item1 {
+    width: 20%;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.blanket1 .item1 * {
+    margin: 8px 10px;
+}
+
+.blanket1 .item1 select {
+    width: 70px;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.blanket1 .item2 {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blanket1 .item2 td {
+    width: 100px;
+}
+
+.blanket1 .item2 select {
+    width: 80px;
+    padding-left: 5px;
+}
+
+.blanket1 .item2 .switch {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.blanket1 .item2 .switch img {
+    width: 28px;
+    height: 34px;
+}
+
+.blanket1 .item3 {
+    width: 30%;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blanket1 .item3 input {
+    border: 1px solid #9a9a9a;
+}
+
+.blanket1 .item3 .special {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blanket1 .item3 .select1 {
+    padding-left: 5px;
+}
+
+.blanket1 .item3 .select3 {
+    padding-left: 5px;
+    width: 100%;
+}
+
+.blanket1 .item3 td {
+    padding-left: 5px;
+}
+
+.blanket1 .item4 {
+    width: 30%;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blanket1 .item4 button {
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0086b3;
+    font: 14px "Lantinghei TC";
+    color: #ffffff;
+}
+
+.blanket2 {
+    width: 100%;
+    height: 100px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-start;
+    font: 16px 'Lantinghei TC';
+}
+
+.blanket2 [class*='item'] {
+    cursor: pointer;
+}
+
+.blanket2 .item-slide {
+    width: 5%;
+    margin-right: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blanket2 .item-info {
+    width: 11%;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blanket2 .item-info:hover {
+    border: none;
+    border-top: 5px solid #0086b3;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+}
+
+.blanket2 .item-info .line1 {
+    font-size: 10px !important;
+    color: gray;
+}
+
+.blanket2 .item-info p {
+    margin: 5px;
+}
+
+.blanket2 .item-info .line2 {
+    font-size: 22px;
+    color: orange;
+    font-weight: 500;
+}
+
+.blanket2 .item-info .line2 span {
+    font-weight: 200;
+    font-size: 18px;
+    color: gray;
+}
+
+.blanket2 .item-last {
+    width: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.blanket2 .item-last * {
+    margin: 5px;
+}
+
+.blanket2 .item-last img {
+    width: 40px;
+    height: 40px;
+}
+
+.blanket2 svg {
+    font-size: 60px;
+}
+
+.blanket3 {
+    width: 100%;
+    height: 120px;
+    margin: 20px auto;
+    font: 12px 'Lantinghei TC';
+}
+
+.blanket3 .title {
+    width: 100%;
+}
+
+.blanket3 .label-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blanket3 .label-container [class*='item'] {
+    width: 20%;
+    height: 90px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blanket3 .label-container [class*='item']  .units {
+    color: gray;
+}
+
+.blanket3 .label-container .item1 {
+    border-left: 3px solid lightseagreen;
+}
+
+.blanket3 .label-container .item1 .pad {
+    width: 70px;
+    height: 50px;
+    background-color: lightseagreen;
+}
+
+.blanket3 .label-container .item2 {
+    border-left: 3px solid #0086b3;
+}
+
+.blanket3 .label-container .item2 .pad {
+    width: 70px;
+    height: 50px;
+    background-color: #0086b3;
+}
+
+.blanket3 .label-container .item3 {
+    border-left: 3px solid indianred;
+}
+
+.blanket3 .label-container .item3 .pad {
+    width: 70px;
+    height: 50px;
+    background-color: indianred;
+}
+
+.blanket3 .label-container .item4 {
+    border-left: 3px solid yellowgreen;
+}
+
+.blanket3 .label-container .item4 .pad {
+    width: 70px;
+    height: 50px;
+    background-color: yellowgreen;
+}
+
+.blanket4 {
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    font: 12px 'Lantinghei TC';
+}
+
+.content-container {
+    border: 1px solid gray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.content-title {
+    width: 100%;
+    height: 10%;
+    background-color: #e6e6e6;
+    color: gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.content-content {
+    width: 100%;
+    height: 90%;
+    background-color: #ffffff;
+    padding: 40px 30px;
+}
+
+.container1 {
+    width: 60%;
+    height: 400px;
+}
+
+.title-container {
+    display: flex;
+}
+
+.table-title {
+    width: 80px;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    background-color: #e6e6e6;
+    margin-right: 5px;
+    line-height: 40px;
+    white-space: nowrap;
+}
+
+.table-selected {
+    background-color: #ffffff;
+    border: 1px solid gray;
+    border-bottom: none;
+    height: 40px;
+}
+
+.table-container {
+    width: 100%;
+    height: 80%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    padding: 15px;
+}
+
+.gray-dot {
+    width: 1px;
+    height: 1px;
+    background: gray;
+    float: left;
+}
+
+.white-line {
+    width: 78px;
+    height: 1px;
+    padding-left: 1px;
+    background: #ffffff;
+    float: left;
+}
+
+.table-container table {
+    border-collapse: collapse;
+    border-color: gray;
+    width: 100%;
+    height: 100%;
+    font: 12px 'Songti TC';
+    color: gray;
+    text-align: center;
+}
+
+.table-container table tr td:hover {
+    background: #e6e6e6;
+}
+
+.container2 {
+    width: 39%;
+    height: 400px;
+}
+
+.content2 {
+    padding: 30px;
+}
+
+form {
+    color: gray;
+}
+
+form label {
+    margin-top: 5px;
+}
+
+form input {
+    border: none;
+    outline: none;
+    margin: 5px auto;
+}
+
+#title {
+    width: 100%;
+}
+
+.split1 {
+    width: 100%;
+    height: 1px;
+    background: gray;
+}
+
+.column2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.split2 {
+    height: 60px;
+    width: 1px;
+    background: gray;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+#detail {
+    width: 100%;
+    height: 120px;
+}
+
+.last-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    border: none;
+    border-radius: 5px;
+    background: #0086b3;
+    color: #ffffff;
+}
+
+.blanket5 {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    font: 12px 'Lantinghei TC';
+}
+
+.container3 {
+    width: 39%;
+    height: 300px;
+}
+
+.container4 {
+    width: 60%;
+    height: 300px;
+}
+
+.content3 {
+    padding: 10px 20px;
+}
+
+.choose-date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.choose-date select {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background: url("unfold2.png") no-repeat scroll right center white;
+    background-size: 12px;
+    outline: none;
+    padding-right: 14px;
+    padding-left: 5px;
+    width: 21%;
+}
+
+.choose-date button {
+    width: 21%;
+    background: #ffffff;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.content3 .split1 {
+    width: 100%;
+    height: 1px;
+    background-color: #0086b3;
+}
+
+.content3 .index {
+    width: 100%;
+    text-align: center;
+}
+
+.content3 .split2 {
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    margin: 0;
+}
+
+.content3 .date {
+    margin-top: 10px;
+    width: 100%;
+    height: 65%;
+    text-align: center;
+}
+
+.content3 .date .weekend {
+    color: indianred;
+}
+
+.content3 .date span {
+    color: black;
+}
+
+.content3 .date .holiday {
+    color: indianred;
+}
+
+.content3 .date tr td:hover {
+    background-color: #0086b3;
+}
+
+.content4 {
+    overflow: auto;
+    padding: 10px 20px;
+}
+
+.content4 .car {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.content4 .car .title td{
+    font-weight: 500;
+}
+
+.bar {
+    width: 60%;
+    background-color: #dcdcdc;
+    height: 5px;
+    display: inline-block;
+}
+
+
+.bar-fill {
+    background-color: #ed6e52;
+    display: block;
+    height: 100%;
+    width: 90%;
+}

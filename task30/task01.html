@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务30:表单(二)多个表单项的动态校验</title>
+    <link rel="stylesheet" type="text/css" href="base.css" />
+</head>
+
+<body>
+    <div class="formcheck">
+        <div class="center">
+            <form method="post">
+                <div class="flex-item">
+                    <label>名称
+                    <input id="name" type="text" value="" required />
+                </label>
+                    <p id="check-name"></p>
+                </div>
+                <!--required表示必填字段，不能为空-->
+                <div class="flex-item">
+                    <label>密码
+                    <input id="psw" type="password" value="" required />
+                    </label>
+                    <p id="check-psw"></p>
+                </div>
+                <div class="flex-item">
+                    <label>密码确认
+                    <input id="repsw" type="password" value="" required />
+                    </label>
+                    <p id="check-repsw"></p>
+                </div>
+                <div class="flex-item">
+                    <label>邮箱
+                    <input id="Email" type="email" value="" required />
+                    </label>
+                    <p id="check-email"></p>
+                </div>
+                <div class="flex-item">
+                    <label>手机
+                    <input id="Tel" type="text" value="" required />
+                    </label>
+                    <p id="check-tel"></p>
+                </div>
+                <input id="Btn" type="button" value="提交" />
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" defer="defer" src="task.js"></script>
+</body>
+
+</html>

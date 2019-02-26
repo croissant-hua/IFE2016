@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务19：基础JavaScript练习(二)</title>
+    <style type="text/css">
+        #display {
+            height: 150px;
+            margin: 50px 0;
+        }
+        
+        #display p {
+            float: left;
+            /*还可以设置成inline-block,设置vertical-align*/
+            width: 20px;
+            background: #f00;
+            padding: 10px;
+            margin: 10px 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="tt" onchange="checkText()" />
+        <button id="leftIn">左侧入</button>
+        <button id="rightIn">右侧入</button>
+        <button id="leftOut">左侧出</button>
+        <button id="rightOut">右侧出</button>
+        <button id="random">随机生成</button>
+        <button id="sortNum">排序</button>
+        <div id="display"></div>
+    </div>
+
+
+    <script type="text/javascript">
+        function checkText() { //处理输入数据
+            var inputText = document.getElementById("tt").value;
+            if (inputText < 10 || inputText > 100) {
+                alert("error:not 10-100!");
+            }
+        }
+        document.addEventListener("click", showText);
+
+        var arr = new Array(); //定义存放数据的数组
+
+        function show() { //展示结果
+            var len = arr.length;
+            var str = '';
+            for (var i = 0; i < len; i++) {
+                str += "<p id='p'+i style='height:" + arr[i] + "px;margin-top:" + (110 - arr[i]) + "px' onclick='deleteSpan(" + i + ")'>" + arr[i] + "</p>";
+            }
+            document.getElementById("display").innerHTML = str;
+        }
+
+        function showText(e) {
+
+            var inputText = document.getElementById("tt").value;
+
+            switch (e.target.id) {
+                case "leftIn":
+                    arr.unshift(inputText);
+                    break;
+                case "rightIn":
+                    arr.push(inputText);
+                    break;
+                case "leftOut":
+                    var item = arr.shift();
+                    alert(item);
+                    break;
+                case "rightOut":
+                    var item = arr.pop();
+                    alert(item);
+                    break;
+                case "random":
+                    randomArray();
+                    break;
+                case "sortNum":
+                    sortArray();
+                    break;
+                default:
+                    break;
+            }
+            len = arr.length;
+            if (len >= 60) {
+                alert("error:arr>60!");
+            }
+            show();
+            document.getElementById("tt").value = ""; //清除输入框中数据
+        }
+
+        function randomArray() {
+            for (let i = 0; i < 10; i++) {
+                //Math.random():获取随机数0~1   Math.floor取整
+                arr[i] = Math.floor(Math.random() * 91 + 9);
+            }
+        }
+
+        function deleteSpan(i) {
+            arr.splice(i, 1); //删除第i项，只删除一项
+        }
+
+        function sortArray() { //排序，比较高度进行排序,js没办法在for循环内sleep
+
+            var len = arr.length,
+                // i, j = 0,
+                delay = 50;
+
+            // for (var i = 0; i < len; i++) {
+            //     for (var j = 0; j < i; j++) {
+            //         if (arr[j] > arr[i]) {
+            //             var num = arr[j];
+            //             arr[j] = arr[i];
+            //             arr[i] = num;
+            //             console.log(arr);
+            //         }
+            //     }
+            //     // sleep(1000);
+            // }
+
+            timer = setInterval(function() {
+                if (i < 1) {
+                    clearInterval(timer);
+                } else if (j === i) {}
+            })
+
+
+        }
+
+
+        // function sleep(d) { //暂停函数
+        //     var t = Date.now();
+        //     while (Date.now() - t <= d) {}
+        // }
+    </script>
+
+</body>
+
+</html>

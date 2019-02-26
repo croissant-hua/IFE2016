@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务20：基础JavaScript练习(三)</title>
+    <style type="text/css">
+        #display {
+            height: 50px;
+        }
+        
+        #display span {
+            width: 20px;
+            line-height: 50px;
+            background: #f00;
+            padding: 10px;
+            margin: 0 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <textarea id="tt" row="5" cols="27"></textarea>
+        <input type="button" id="leftIn" value="左侧入" />
+        <input type="button" id="rightIn" value="右侧入" />
+        <input type="button" id="leftOut" value="左侧出" />
+        <input type="button" id="rightOut" value="右侧出" />
+        <div id="display"></div>
+        <input type="text" id="matching" />
+        <input type="button" id="seek" value="查询" />
+    </div>
+
+
+    <script type="text/javascript">
+        document.addEventListener("click", showText);
+
+        var arr = new Array();
+
+        function showText(e) {
+
+            var inputText = document.getElementById("tt").value;
+
+            switch (e.target.id) {
+                case "leftIn":
+                    arr.unshift(inputText);
+                    break;
+                case "rightIn":
+                    arr.push(inputText);
+                    break;
+                case "leftOut":
+                    var item = arr.shift();
+                    alert(item);
+                    break;
+                case "rightOut":
+                    var item = arr.pop();
+                    alert(item);
+                    break;
+                case "seek":
+                    var matchText = document.getElementById("matching").value;
+                    console.log(matchText);
+                    console.log(arr);
+                    console.log(inputText);
+                    pattern = /.matchText/;
+                    var result = inputText.match(pattern);
+                    console.log(result);
+                default:
+                    break;
+            }
+
+            len = arr.length;
+            var str = '';
+            for (var i = 0; i < len; i++) {
+                str += "<span onclick='deleteSpan(" + i + ")'>" + arr[i] + "</span>";
+            }
+            document.getElementById("display").innerHTML = str;
+        }
+
+        function deleteSpan(i) {
+            arr.splice(i, 1); //删除第i项，只删除一项
+        }
+    </script>
+
+</body>
+
+</html>

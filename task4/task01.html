@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>任务4：定位和居中问题</title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+        
+        .div1 {
+            height: 200px;
+            background: #ccc;
+            width: 400px;
+            /*宽度、高度自适应*/
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            /*垂直水平居中*/
+            /*overflow: hidden;    画整圆可以隐藏边框外的部分*/
+        }
+        
+        #id1 {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 0 0 50px 0;
+            background: #fc0;
+        }
+        
+        #id2 {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px 0 0 0;
+            background: #fc0;
+            -webkit-transform: translate(350px, 150px);
+            /*平移*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div id="id1"></div>
+        <div id="id2"></div>
+    </div>
+</body>
+
+</html>

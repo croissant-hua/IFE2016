@@ -1,0 +1,488 @@
+body {
+    background: #000;
+}
+
+header {
+    height: 650px;
+}
+
+.all {
+    width: 1200px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.header-book {
+    margin: 0 400px 0 40px;
+    width: 110px;
+    height: 60px;
+    line-height: 5em;
+}
+
+.header-book span {
+    float: right;
+    font-size: 1.2em;
+    line-height: 50px;
+}
+
+.header-li {
+    float: right;
+    height: 50px;
+}
+
+.header-li li {
+    float: left;
+    margin-right: 50px;
+    list-style-type: none;
+    /*去掉小黑点*/
+}
+
+.header-li a {
+    text-decoration: none;
+}
+
+.header-li a:hover {
+    padding-bottom: 20px;
+    border-bottom: 4px solid #f00;
+    color: #f00;
+}
+
+.header-li li:last-child {
+    float: right;
+    background: url(jpg/p.JPG) 0 0 no-repeat;
+}
+
+.header-login span {
+    /* float: right; */
+    color: #f00;
+    margin-left: 25px;
+}
+
+.header-pic {
+    position: relative;
+    background: url(jpg/new1.jpg) 50% 0;
+    width: 1200px;
+    height: 550px;
+}
+
+.header-pic-word {
+    position: absolute;
+    width: 50%;
+    bottom: 160px;
+    left: 180px;
+    color: #fff;
+}
+
+.header-pic-word span {
+    font-size: 3em;
+}
+
+.header-pic-word p {
+    font-size: 20px;
+}
+
+.header-pic #Btn {
+    margin-top: 40px;
+    text-align: center;
+    width: 300px;
+    height: 55px;
+    font-size: 30px;
+    line-height: 50px;
+    border-style: none;
+    color: #fff;
+    background: #f00;
+}
+
+.section-round {
+    width: 1200px;
+    height: 200px;
+    font-size: 13px;
+}
+
+.section-round img {
+    width: 50px;
+    height: 47px;
+}
+
+.section-round-round {
+    float: left;
+    text-align: center;
+    width: 290px;
+    padding: 10px 2px;
+    background: url(jpg/round.JPG) 50% 0 no-repeat;
+}
+
+.section-round-flag {
+    float: left;
+    text-align: center;
+    width: 290px;
+    padding: 10px 2px;
+    background: url(jpg/flag.JPG) 50% 0 no-repeat;
+}
+
+.section-round-flower {
+    float: left;
+    text-align: center;
+    width: 290px;
+    padding: 10px 2px;
+    background: url(jpg/flower.JPG) 50% 0 no-repeat;
+}
+
+.section-round-square {
+    float: left;
+    text-align: center;
+    width: 290px;
+    padding: 10px 2px;
+    background: url(jpg/square.JPG) 50% 0 no-repeat;
+}
+
+.section-round-p {
+    width: 145px;
+    margin-top: 70px;
+    padding: 0.3px 70px;
+    border-right: 2px solid rgb(141, 141, 141);
+}
+
+.section-round-pp {
+    width: 145px;
+    margin-top: 70px;
+    padding: 0.3px 70px;
+}
+
+.section-book {
+    position: relative;
+    background: rgb(236, 236, 236);
+    height: 320px;
+    font-size: 45px;
+    color: rgb(156, 156, 156);
+}
+
+.section-book-bk {
+    position: absolute;
+    top: 50px;
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 50px;
+    text-align: center;
+    background: url(jpg/book.JPG) 50% 0 no-repeat;
+    background-size: 10% 55%;
+}
+
+.section-book-bk p {
+    margin-top: 100px;
+}
+
+.section-book-bk img {
+    width: 100px;
+    height: 120px;
+}
+
+.section-map {
+    position: relative;
+    height: 320px;
+    background: url(jpg/map1.jpg) 0 0;
+    color: #fff;
+    text-align: center;
+}
+
+.section-map-message {
+    position: absolute;
+    top: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section-map-message p {
+    font-size: 10px;
+}
+
+.section-map-message select,
+#Btn {
+    width: 200px;
+    height: 30px;
+}
+
+.section-map-message #Btn {
+    background: rgb(207, 3, 3);
+    color: white;
+    border-style: none;
+}
+
+.section-active {
+    height: 600px;
+    background: rgb(245, 222, 222);
+}
+
+.section-active .section-active-bj,
+.section-active-sh,
+.section-active-sz,
+.section-active-xg {
+    float: left;
+    text-align: center;
+    width: 290px;
+    margin-top: 90px;
+}
+
+.section-active h3,
+h5,
+p {
+    margin: 0;
+}
+
+.section-active p {
+    font-size: 10px;
+}
+
+.section-active h3 {
+    letter-spacing: 30px;
+}
+
+.section-newWorld {
+    height: 530px;
+}
+
+.section-newWorld-01 {
+    float: right;
+    width: 300px;
+    margin: 130px 30px 100px 30px;
+}
+
+.section-newWorld-pic img {
+    width: 800px;
+}
+
+.section-newWorld-01-more {
+    width: 120px;
+    height: 28px;
+    border: 1px solid #f00;
+    text-align: center;
+    margin: 50px 60px;
+}
+
+.section-newWorld-01-more a {
+    text-decoration: none;
+    color: #f00;
+    line-height: 25px;
+}
+
+.section-newLife {
+    height: 500px;
+}
+
+.section-newLife .section-newLife-red,
+.section-newLife-pic,
+.section-newLife-more {
+    width: 400px;
+}
+
+.section-newLife-red {
+    float: left;
+    background: rgb(250, 67, 67);
+    height: 500px;
+}
+
+.section-newLife-pic {
+    float: right;
+}
+
+.section-newLife-more {
+    position: relative;
+    width: 388px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.section-newLife-pic img {
+    width: 400px;
+    height: 500px;
+}
+
+.section-newLife-red-word {
+    width: 200px;
+    margin: 150px 100px;
+    text-align: center;
+}
+
+.section-newLife-red-word #Btn {
+    text-align: center;
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: rgb(250, 67, 67);
+}
+
+.section-newLife-red-ww {
+    font-size: 20px;
+    color: #fff;
+}
+
+.section-newLife-red-line {
+    width: 40px;
+    margin: 20px 80px;
+    border-top: 2px solid #fff;
+}
+
+.section-newLife-more-word {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 200px;
+    text-align: center;
+}
+
+.section-newLife-more-word #Btn {
+    text-align: center;
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #f00;
+    color: #f00;
+    background: #fff;
+}
+
+.section-newLife-more-ww {
+    font-size: 20px;
+}
+
+.section-newLife-more-line {
+    width: 40px;
+    margin: 20px 80px;
+    border-top: 2px solid #ccc;
+}
+
+.section-volunteer {
+    height: 700px;
+    position: relative;
+}
+
+.section-volunteer-tt {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 1050px;
+    height: 600px;
+}
+
+.section-volunteer-title {
+    text-align: center;
+}
+
+.section-volunteer-line {
+    width: 40px;
+    margin: 20px 500px;
+    border-top: 2px solid #f00;
+}
+
+.section-volunteer-message {
+    float: right;
+    width: 700px;
+    height: 300px;
+    margin-top: 70px;
+}
+
+.section-volunteer-message input {
+    background: rgb(236, 229, 229);
+    border-style: none;
+    width: 280px;
+    height: 40px;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.section-volunteer-message #input1 {
+    width: 595px;
+    height: 100px;
+}
+
+.section-volunteer-message #input2 {
+    width: 605px;
+}
+
+.section-volunteer-rules {
+    margin-top: 80px;
+    width: 320px;
+}
+
+.section-volunteer-rules h4 {
+    font-family: SimHei;
+    font-size: 15px;
+}
+
+.section-volunteer-rules p {
+    font-size: 13px;
+    color: rgb(165, 164, 164);
+    opacity: 1;
+    font-family: SimHei;
+    line-height: 25px;
+}
+
+.s_tico {
+    float: right;
+    width: 95px;
+    height: 16px;
+}
+
+.s_tico .more {
+    float: left;
+    width: 40px;
+    height: 15px;
+    line-height: 20px;
+    background: url(jpg/icon.jpg) 0 -16px no-repeat;
+    cursor: pointer;
+    /*鼠标指针变成手*/
+}
+
+.s_tico p {
+    line-height: 5px;
+}
+
+.section-contact {
+    position: relative;
+    text-align: center;
+    height: 600px;
+    background: rgb(54, 50, 50);
+}
+
+.section-contact-content {
+    position: absolute;
+    margin: 10% 30%;
+    font-family: SimHei;
+    color: #fff;
+}
+
+.section-contact-content p {
+    font-size: 10px;
+}
+
+.section-contact-content #email {
+    margin: 20px 0;
+    height: 20px;
+}
+
+.section-contact-content #button {
+    height: 25px;
+}
+
+footer {
+    height: 50px;
+    font-size: 10px;
+    line-height: 50px;
+    color: #fff;
+    background: rgb(71, 63, 63);
+}
+
+footer a {
+    float: right;
+    margin-right: 80px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    width: 100px;
+    margin-left: 80px;
+}

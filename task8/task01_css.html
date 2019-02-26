@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务8：task01-grid栅格化</title>
+    <style type="text/css">
+        .container {
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+            border: 1px solid #999;
+        }
+        
+        .container * {
+            /* 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制，
+            例如：.row的padding，.row的大小不再变化，在其内部划分padding*/
+            box-sizing: border-box;
+        }
+        
+        .row::before,
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+            /* 清除浮动 */
+        }
+        
+        [class*="col-"] {
+            float: left;
+            /* gutter间隙 */
+            padding: 10px;
+        }
+        
+        [class*="col-"]>p {
+            /* 防止没有内容填充时堆叠在一起 */
+            /* min-height: 10px; */
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            color: #f00;
+            border: 1px solid #999;
+            background: #eee;
+            padding: 0;
+            margin: 0;
+            /* margin: 10px; 不可行，因为margin固定，百分比分布就有误差，添加块元素标签<p></p>*/
+        }
+        
+        .col-sm-1 {
+            width: 8.33%;
+        }
+        
+        .col-sm-2 {
+            width: 16.66%;
+        }
+        
+        .col-sm-3 {
+            width: 25%;
+        }
+        
+        .col-sm-4 {
+            width: 33.33%;
+        }
+        
+        .col-sm-6 {
+            width: 50%;
+        }
+        
+        @media all and (max-width: 768px) {
+            .col-xs-2 {
+                width: 16.66%;
+            }
+            .col-xs-3 {
+                width: 25%;
+            }
+            .col-xs-6 {
+                width: 50%;
+            }
+            .col-xs-8 {
+                width: 66.66%;
+            }
+            .col-xs-12 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 响应式布局：用百分比分配，若想存在间隔且不影响百分比分配，只能在内部填充padding，
+        外部是无间隙的平均分配，这样百分比才不会有误差 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-4">
+                <p>4栏 6栏</p>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+                <p>4栏 6栏</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <p>4栏 12栏</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-sm-3">
+                <p>3栏 3栏</p>
+            </div>
+            <div class="col-xs-6 col-sm-6">
+                <p>6栏 6栏</p>
+            </div>
+            <div class="col-xs-3 col-sm-3">
+                <p>3栏 3栏</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-sm-1">
+                <p>1栏 2栏</p>
+            </div>
+            <div class="col-xs-2 col-sm-1">
+                <p>1栏 2栏</p>
+            </div>
+            <div class="col-xs-8 col-sm-2">
+                <p>2栏 8栏</p>
+            </div>
+            <div class="col-xs-3 col-sm-2">
+                <p>2栏 3栏</p>
+            </div>
+            <div class="col-xs-3 col-sm-6">
+                <p>6栏 3栏</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>任务10-Flexbox布局</title>
+    <style type="text/css">
+        body * {
+            box-sizing: border-box;
+        }
+        
+        * {
+            padding: 20px;
+        }
+        
+        .main {
+            display: flex;
+            /*伸缩项目平均地分布在行里。
+            第一个伸缩项目在一行中最开始的位置，最后一个在一行中最终位置
+            space-around 平均分布在行里，但两端保留一半的空间*/
+            justify-content: space-between;
+            /*垂直居中 */
+            align-items: center;
+            border: 1px solid #000;
+        }
+        
+        .rectangle {
+            width: 150px;
+            border: 1px solid #f00;
+        }
+        
+        .first {
+            height: 120px;
+        }
+        
+        .second {
+            height: 100px;
+        }
+        
+        .third {
+            height: 40px;
+        }
+        
+        .fourth {
+            height: 200px;
+            border: 1px solid #00f;
+        }
+        
+        @media screen and (max-width: 640px) {
+            /* 使用flex时，宽度上不能使用margin ，否则会导致设置屏幕宽度不准确*/
+            body * {
+                box-sizing: border-box;
+            }
+            * {
+                padding: 20px;
+            }
+            .main {
+                display: flex;
+                /* 上方对齐 */
+                align-items: flex-start;
+                flex-wrap: wrap;
+                border: 1px solid #000;
+            }
+            .rectangle {
+                width: 150px;
+                border: 1px solid #f00;
+                margin-bottom: 10px;
+            }
+            .first {
+                height: 120px;
+            }
+            .second {
+                height: 100px;
+            }
+            .third {
+                height: 40px;
+                order: 1;
+            }
+            /* order属性  用来设置伸缩项的显示顺序，
+            order 值越大，越排在后面，order也可取负值 */
+            .fourth {
+                height: 200px;
+                border: 1px solid #00f;
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="first rectangle"></div>
+        <div class="second rectangle"></div>
+        <div class="third rectangle"></div>
+        <div class="fourth rectangle"></div>
+    </div>
+</body>
+
+</html>

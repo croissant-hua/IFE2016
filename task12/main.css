@@ -1,0 +1,172 @@
+table {
+    width: 300px;
+}
+
+thead tr th {
+    background: #000;
+    color: #fff;
+    text-align: left;
+}
+
+
+/*CSS3:nth-child()选择器
+ 设置单双行颜色
+ odd匹配下标是奇数
+ even匹配下标是偶数
+ 第一个子元素的下标是1 */
+
+tbody tr:nth-child(even) {
+    background: #ccc;
+}
+
+
+/* 使用公式(an+b)表示周期长度
+n是计数器(从0开始)，b是偏移值 */
+
+tbody tr:nth-child(-n+3) {
+    color: #f00;
+}
+
+form {
+    margin: 50px 30px;
+}
+
+
+/* transition是简写属性，包含四个过度属性
+ transition-property:过渡属性名称
+ transition-duration:过渡效果多少s或ms
+ transition-timing-function:速度效果的速度曲线
+ transition-delay:过渡效果何时开始
+ 
+ 效果开始于指定的CSS属性改变值时*/
+
+form input {
+    width: 160px;
+    border: 1px solid #ccc;
+    transition: width .5s;
+}
+
+form input:focus {
+    width: 300px;
+    border: 1px solid #f00;
+}
+
+.banner {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 10px 30px;
+    /* 隐藏超出部分 */
+    overflow: hidden;
+}
+
+
+/* animation 属性是一个简写属性，用于设置六个动画属性：
+
+    animation-name:绑定到选择器的keyframe名称；
+    animation-duration:时间，s或ms；
+    animation-timing-function:速度曲线
+    animation-delay:延迟
+    animation-iteration-count:播放次数
+    animation-direction:是否应该轮流反向播放
+ 
+ @keyframes规则
+    */
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    animation: slider-init .5s linear;
+    -webkit-animation: slider-init .5s linear;
+    background: #f00;
+}
+
+.slider li {
+    /* position设置li在容器内，不超界
+    设置宽高：充分填充容器 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    list-style-type: none;
+    animation: slider-out .5s linear;
+    -webkit-animation: slider-out .5s linear;
+}
+
+.slider li:target {
+    /* 进入页面显示的颜色块为目标颜色 */
+    left: 0%;
+    animation: slider-in .5s linear;
+    -webkit-animation: slider-in .5s linear;
+}
+
+#slider-1 {
+    background: #f00;
+}
+
+#slider-2 {
+    background: #0f0;
+}
+
+#slider-3 {
+    background: #00f;
+}
+
+
+/*初始化界面*/
+
+@-webkit-keyframes slider-init {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+
+/* 下面两个连在一起动 */
+
+@-webkit-keyframes slider-out {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@-webkit-keyframes slider-in {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.btn {
+    position: absolute;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    right: 0;
+    bottom: 0;
+    /* 不被覆盖 */
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.btn a {
+    width: 45px;
+    height: 45px;
+    background: #ababab;
+    text-align: center;
+    line-height: 45px;
+    text-decoration-line: none;
+    z-index: 1;
+}

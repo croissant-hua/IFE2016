@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>任务31:表单(三)联动-js</title>
+    <style type="text/css">
+        .showContent {
+            width: 500px;
+            margin: 200px auto;
+        }
+        
+        input {
+            margin: 50px 0 50px 50px;
+        }
+        
+        select {
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="showContent" onchange="radioShow()">
+        <form>
+            <input type="radio" id="inSchoolRadio" name="student" value="在校生" checked="checked" />在校生
+            <input type="radio" id="outSchoolRadio" name="student" value="非在校生" />非在校生
+            <div id="c">
+                <div class="school">
+                    <label>学校
+                        <select id="city" onchange="clickOpt()">
+                            <option value="choose">请选择省/市</option>
+                            <option value="bj">北京</option>
+                            <option value="sh">上海</option>
+                            <option value="tj">天津</option>
+                        </select>
+                        <select id="university">
+                            <option value="choose">请选择省/市</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="company" style="display:none">
+                    <label>就业单位
+                    <input type="text" id="company" />
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function radioShow() {
+        var myRadio = document.getElementsByName("student");
+        var myDiv = document.getElementById("c").getElementsByTagName("div");
+        var len = myDiv.length;
+        for (var i = 0; i < len; i++) {
+            if (myRadio[i].checked) {
+                myDiv[i].style.display = "block";
+            } else {
+                myDiv[i].style.display = "none";
+            }
+        }
+    }
+
+
+    function clickOpt() {
+        //数组的写法更简洁
+        let university = {
+            choose: ['请选择省/市'],
+            bj: ['北京大学', '清华大学', '北京邮电大学'],
+            sh: ['复旦大学', '上海交通大学'],
+            tj: ['天津大学', '南开大学']
+        }
+
+        //表单联动---父选项与子选项用value连接
+        //selectedIndex属性 可设置或返回下拉列表中被选选项的索引号
+        var parentCity = document.getElementById("city");
+        var childUni = document.getElementById("university");
+        var selectedOpt = parentCity.options[parentCity.selectedIndex].value;
+        //清空子选项---写法简洁
+        childUni.innerHTML = "";
+        for (let i = 0; i < university[selectedOpt].length; i++) {
+            //加option节点
+            var opt = document.createElement("option");
+            opt.value = university[selectedOpt][i];
+            opt.innerHTML = university[selectedOpt][i];
+            childUni.appendChild(opt);
+        }
+    }
+</script>
+
+</html>

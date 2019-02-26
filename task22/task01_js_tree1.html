@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务22：JavaScript和树(一)</title>
+    <style type="text/css">
+        body * {
+            box-sizing: border-box;
+        }
+        
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            max-width: 600px;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        #root {
+            margin: 100px auto;
+        }
+        
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        p button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <p>
+        <button id="preBtn">前序</button>
+        <button id="inBtn">中序</button>
+        <button id="postBtn">后序</button>
+    </p>
+
+    <script type="text/javascript">
+        var buttons = document.getElementsByTagName("button");
+        var timer = null;
+        var lock = false;
+
+        //前序遍历
+        function preOrder(node, List) {
+            if (node) {
+                List.push(node);
+                preOrder(node.children[0], List); //要正确取孩子节点
+                preOrder(node.children[1], List);
+            }
+        }
+        //中序遍历
+        function inOrder(node, List) {
+            if (node) {
+                inOrder(node.children[0], List);
+                List.push(node);
+                inOrder(node.children[1], List);
+            }
+        }
+        //后序遍历
+        function postOrder(node, List) {
+            if (node) {
+                postOrder(node.children[0], List);
+                postOrder(node.children[1], List);
+                List.push(node);
+            }
+        }
+        //遍历块展示
+        function show(List) {
+            var i = 0;
+            var len = List.length;
+            List[i++].style.backgroundColor = "pink";
+            lock = true;
+            timer = setInterval(function() {
+                if (i < len) {
+                    List[i - 1].style.backgroundColor = "white";
+                    List[i++].style.backgroundColor = "pink";
+                } else {
+                    List[i - 1].style.backgroundColor = "white";
+                    lock = false;
+                    clearInterval(timer); //取消setInterval()设置的timeout暂停
+                }
+            }, 500);
+
+        }
+        //遍历选择
+        function order(orderIndex) {
+            var treeNode = document.getElementById("root");
+            var List = [];
+            switch (orderIndex) {
+                case 0:
+                    preOrder(treeNode, List);
+                    break;
+                case 1:
+                    inOrder(treeNode, List);
+                    break;
+                case 2:
+                    postOrder(treeNode, List);
+                    break;
+            }
+            show(List);
+        }
+
+        function init() {
+            for (var i = 0; i < buttons.length; i++) {
+                (function(i) {
+                    buttons[i].onclick = function() {
+                        if (lock === true) {
+                            alert("正在遍历中！");
+                        } else {
+                            order(i);
+                        }
+                    };
+                }(i));
+            }
+        }
+        init();
+    </script>
+</body>
+
+</html>

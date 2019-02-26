@@ -1,0 +1,107 @@
+body * {
+    /* 指定的任何内边距和
+    边框都将在已设定的宽度和高度内进行绘制 */
+    box-sizing: border-box;
+}
+
+.tree-module {
+    max-width: 450px;
+    margin: 50px auto;
+}
+
+.search-module {
+    margin: 20px 10px;
+}
+
+.menu {
+    margin: 20px 20px;
+}
+
+.nodebody-visible {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 5px 18px;
+    background-color: #fff;
+    user-select: none;
+    /*user-select 设置或检索是否允许用户选择文本：
+    none 文本不能被选择 ，text 可以选择文本
+    all 当所有内容作为一个整体时可以被选择
+    element 可以选择文本，但选择范围受元素边界的约束*/
+}
+
+.node-header {
+    padding: 10px;
+}
+
+.nodebody-hidden {
+    display: none;
+}
+
+.arrow {
+    display: inline-block;
+}
+
+[class*="-arrow"] {
+    /* 以-arrow结尾的class */
+    width: 0;
+    height: 0;
+}
+
+.empty-arrow {
+    margin: 5px;
+}
+
+.right-arrow {
+    border-left: 10px solid #6898c2;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.down-arrow {
+    border-top: 10px solid #6898c2;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.node-title {
+    padding: 10px;
+    color: #6898c2;
+    font-size: 14px;
+    font-family: "Microsoft Yahei UI";
+}
+
+.node-title:hover,
+.arrow:hover {
+    cursor: pointer;
+    color: #00f;
+}
+
+.addIcon,
+.deleteIcon {
+    display: none;
+    vertical-align: top;
+}
+
+.addIcon:hover,
+.deleteIcon:hover {
+    cursor: pointer;
+}
+
+.node-header:hover>.addIcon,
+.node-header:hover>.deleteIcon {
+    display: inline;
+}
+
+.node-title-Highlight {
+    color: #f00;
+    font-weight: bold;
+}
+
+#show-result {
+    text-align: center;
+    height: 20px;
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+}

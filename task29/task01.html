@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务29：表单(一)单个表单项的检验</title>
+    <style type="text/css">
+        body {
+            background: #000;
+        }
+        
+        .formcheck {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 600px;
+            height: 400px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+        
+        .center {
+            height: 300px;
+            width: 500px;
+            margin: 50px auto;
+        }
+        
+        #Btn {
+            background: #00f;
+            color: #fff;
+        }
+        
+        form label,
+        input {
+            font-size: 20px;
+        }
+        
+        table td {
+            text-align: center;
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formcheck">
+        <div class="center">
+            <form method="post">
+                <table>
+                    <tr>
+                        <td><label>名称</label></td>
+                        <td><input id="myForm" type="text" value="" required /></td>
+                        <!--required表示必填字段，不能为空-->
+                        <td><input id="Btn" type="button" value="验证" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="123">
+                            <p id="result">必填，长度为4~16个字符</p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        /* 
+         * addEventListener:监听Dom元素的事件 
+         * 
+         * target：监听对象 
+         * type：监听函数类型，如click,mouseover 
+         * func：监听函数 
+         */
+        function addEventHandle(target, type, func) {
+            if (target.addEvenListener) {
+                target.addEvenListener(type, func);
+            } else if (target.attachEvent) {
+                target.attachEvent("on" + type, func); //IE不支持事件捕获
+            } else {
+                target["on" + type] = func; //事实上这种情况不会存在
+            }
+        }
+
+        var bindEventBtn = document.getElementById("Btn");
+        bindEventBtn.addEventListener("click", format_check); /*button事件监听*/
+
+        function format_check() {
+            //使用value属性读取设置文本框的值
+            var textbox = document.getElementById("myForm").value;
+            //将汉字计算成两个字节的函数  正则表达式  最好不要改變原有的方法
+            function lenB(textbox) {
+                return textbox.replace(/[^\x00-\xff]/g, 'aa').length;
+            }
+
+            var realLength = lenB(textbox);
+            console.log(realLength);
+            //格式验证
+            var mychar = document.getElementById("result");
+            if (realLength === 0) {
+                mychar.innerHTML = "不能为空!";
+                mychar.style.color = "red";
+            } else if (realLength > 16 || realLength < 4) {
+                mychar.innerHTML = "格式错误"; //重新获取value值
+                mychar.style.color = "red";
+            } else {
+                mychar.innerHTML = "格式正确";
+                mychar.style.color = "green";
+            }
+        };
+    </script>
+</body>
+
+</html>

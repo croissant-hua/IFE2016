@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>任务25:树形组件</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <!-- fieldset组合表单中的相关元素，可将表单内容的一部分打包，生成一组相关表单的字段
+        legend元素为 fieldset 元素定义标题 -->
+    <fieldset class="tree-module">
+        <legend>树形组件</legend>
+        <div class="search-module">
+            <input type="text" id="search-txt" value="" />
+            <button id="search">搜索</button>
+            <button id="clear">清除</button>
+        </div>
+        <div id="show-result"></div>
+        <!-- 文字左边的向下或向右箭头：1）可以用border三边设置；2）用图片设置onclick触发事件改变 -->
+        <div class="menu">
+            <div class="nodebody-visible">
+                <label class="node-header">
+                    <div class="arrow empty-arrow"></div>
+                    <span class="node-title">目录</span>
+                    <img class="addIcon" src="./image/add.png" />
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <script type="text/javascript" src="task.js"></script>
+</body>
+
+</html>

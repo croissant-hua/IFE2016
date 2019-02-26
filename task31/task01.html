@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>任务31：表单(三)联动-js----未运行成功</title>
+    <style type="text/css">
+        .showContent {
+            width: 500px;
+            margin: 200px auto;
+        }
+        
+        input {
+            margin: 50px 0 50px 50px;
+        }
+        
+        select {
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="showContent" onchange="radioShow()">
+        <form>
+            <input type="radio" id="inSchoolRadio" name="student" value="在校生" checked="checked" />在校生
+            <input type="radio" id="outSchoolRadio" name="student" value="非在校生" />非在校生
+            <div id="c">
+                <div class="school">
+                    <label>学校
+                        <select id="city"></select>
+                        <select id="university"></select>
+                    </label>
+                </div>
+                <div class="company" style="display:none">
+                    <label>就业单位
+                    <input type="text" id="company" />
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function radioShow() {
+        var myRadio = document.getElementsByName("student");
+        var myDiv = document.getElementById("c").getElementsByTagName("div");
+        var len = myDiv.length;
+        for (var i = 0; i < len; i++) {
+            if (myRadio[i].checked) {
+                myDiv[i].style.display = "block";
+            } else {
+                myDiv[i].style.display = "none";
+            }
+        }
+    }
+
+    let city = ['请选择省/市', '北京', '上海', '天津'];
+    let university = [
+        ['请选择学校'],
+        ['北京大学', '清华大学', '北京邮电大学'],
+        ['复旦大学', '上海交通大学'],
+        ['天津大学', '南开大学']
+    ];
+
+    var parentCity = document.getElementById("city");
+    var childUni = document.getElementById("university");
+
+    console.log("0000");
+    initCity();
+
+    function initCity() { //父选项
+
+        //子选项的长度大于0，将所有选项清空
+        // var cLength = childUni.options.length;
+        // console.log(childUni.options);
+        // console.log(cLength);
+        // if (cLength > 0) {
+        //     for (var i = 0; i < cLength; i++) {
+        //         child.options.remove(0);
+        //     }
+        // }
+
+        let index = 0;
+        console.log("111");
+        for (let i = 0; i < city.length; i++) {
+            parentCity.options[i].text = city[i];
+            parentCity.options[i].value = city[i];
+
+        }
+
+        //selectedIndex属性 可设置或返回下拉列表中被选选项的索引号
+
+        parentCity.selectedIndex = index;
+        initUni(index);
+    }
+
+    function initUni(index) { //子选项
+        console.log("22222");
+        childUni.length = university[index].length;
+        for (let i = 0; i < childUni.length; i++) {
+            /////////////////////////////////
+            //错误------总是显示.value未定义
+            childUni.options[i].value = university[index][i];
+            childUni.options[i].text = university[index][i];
+        }
+    }
+
+    parentCity.onchange = function() { //clickOpt()
+        console.log("33333");
+        let _this = this.selectedIndex;
+        childUni.length = 0;
+        initUni(_this);
+    }
+</script>
+
+
+</html>

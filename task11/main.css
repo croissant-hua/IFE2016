@@ -1,0 +1,258 @@
+html {
+    /* 若想随着屏幕的大小变化，应该在这里设置font-size范围 */
+    font-size: 54px;
+}
+
+body * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Microsoft YaHei', "Helvetica Neue", Helvetica, STHeiti, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    font-family: normal;
+}
+
+header {
+    position: relative;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    background-color: #91d4da;
+    font-size: 0.5rem;
+    color: #fff;
+}
+
+.goback {
+    position: absolute;
+    text-decoration-line: none;
+    color: #fff;
+    padding-left: 0.1rem;
+    /* 聚焦时默认样式的取消 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+header .goback img {
+    height: 0.6rem;
+    vertical-align: sub;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 100%;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+}
+
+.main * {
+    background-color: #fff;
+}
+
+ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 0.32rem;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+nav {
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+nav ul li {
+    flex: 1 1 0%;
+}
+
+.active {
+    /* 设置高度100%，保证元素不出界 */
+    height: 100%;
+    border-bottom: 0.1rem solid #91d4da;
+}
+
+.picture {
+    width: 100%;
+}
+
+.picture img {
+    width: 100%;
+}
+
+.labels {
+    height: 2.5rem;
+}
+
+.labels>ul li {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+.labels>ul li img {
+    margin: 0.4rem 0;
+    padding: 0.1rem;
+    border: 1px solid #91d4da;
+    border-radius: 0.5rem;
+    background-color: #91d4da;
+}
+
+.cut-line {
+    padding: 0.2rem;
+}
+
+.cut-line hr {
+    width: 98%;
+    margin: 0 auto;
+}
+
+
+/* 不要设置subfield模块的固定高度
+内容放不开会溢出
+直接根据子元素自动适应高度 */
+
+.subfield>ul li {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-right: 1px solid #ababab;
+}
+
+.subfield>ul li:last-child {
+    border-right-style: none;
+}
+
+.subfield>ul li img {
+    width: 100%;
+}
+
+.subfield>ul li h3,
+h4 {
+    padding: 0.15rem 0;
+}
+
+.subfield>ul li .img3 {
+    /* %相对于父元素 */
+    margin: 7% 0;
+}
+
+.module,
+.articles {
+    margin-top: 0.4rem;
+    color: #ababab;
+}
+
+.module header {
+    color: #ababab;
+    padding-left: 0.2rem;
+    font-size: 0.35rem;
+    height: 1rem;
+    line-height: 1.2rem;
+}
+
+.module section {
+    display: flex;
+    padding: 0.2rem;
+}
+
+.module section img {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #f00;
+}
+
+.module section ul {
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+
+/* padding设置为%时，那这个%是相对于父元素的宽度而言的，
+使用padding-bottom来代替height实现高度与宽度成比例效果，
+将padding-bottom设置为想要实现的height的值，
+同时将height设为0以使元素“高度”等于padding-bottom的值
+margin与padding类似
+弊端：但是这种方法无法调整文字的垂直高度位置
+*/
+
+.module section ul li {
+    width: 45%;
+    /* height: 0; */
+    position: relative;
+    /* padding-bottom: 19%; */
+    text-align: center;
+    margin: 1%;
+    /* line-height: 300%; */
+    background: #f7f5f5;
+}
+
+
+/* 设置伪元素margin/padding撑开容器 */
+
+.module section ul li::before {
+    content: '';
+    display: block;
+    padding-bottom: 10%;
+}
+
+.module section ul li::after {
+    content: '';
+    display: block;
+    padding-bottom: 10%;
+}
+
+.articles article {
+    display: flex;
+    padding: 0.1rem;
+}
+
+.articles article img {
+    width: 30%;
+    height: 100%;
+}
+
+.articles article div {
+    padding-left: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.articles article div h2 {
+    color: #5d5d5d;
+    font-size: 0.3rem;
+}
+
+.articles article div ul {
+    padding: 0.2rem 0;
+}
+
+.articles article div ul img {
+    width: 100%;
+    padding-right: 0.1rem;
+}

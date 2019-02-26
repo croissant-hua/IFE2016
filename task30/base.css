@@ -1,0 +1,49 @@
+body {
+    background: #000;
+}
+
+.formcheck {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 800px;
+    height: 800px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.center {
+    height: 550px;
+    width: 500px;
+    margin: 120px auto;
+    display: flex;
+    justify-content: space-evenly;
+    /*设置水平垂直距离*/
+    flex-wrap: wrap;
+}
+
+#Btn {
+    background: #00f;
+    color: #fff;
+    margin-left: 290px;
+}
+
+form label,
+input {
+    font-size: 20px;
+}
+
+.flex-item input {
+    margin: 10px 10px 10px 20px;
+}
+
+.flex-item {
+    text-align: right;
+}
+
+.flex-item p {
+    text-align: center;
+}

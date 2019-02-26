@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>任务2：零基础HTML及CSS编码(一)</title>
+    <style type="text/css">
+        #u1 a {
+            color: white;
+        }
+        
+        body {
+            background-color: rgb(65, 60, 60);
+            margin: 0 30px;
+        }
+        
+        div #div1,
+        #div2,
+        #div3,
+        #div4,
+        #div5 {
+            background: white;
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-right: 2px solid rgb(61, 54, 54);
+            border-bottom: 2px solid rgb(61, 54, 54);
+            margin: 10px 20px 20px 20px;
+            padding: 20px;
+        }
+        
+        #id2 {
+            background: rgb(218, 212, 212);
+            margin: 0;
+            padding: 0;
+            bottom: 0;
+        }
+        
+        #id1 {
+            border-style: none;
+            background-color: rgb(65, 60, 60);
+        }
+        
+        #s1 {
+            float: left;
+            background: black;
+        }
+        
+        #u1 {
+            float: right;
+        }
+        
+        #u1 li {
+            float: left;
+            margin-right: 25px;
+        }
+        
+        .cla1 {
+            border-style: none;
+        }
+        
+        .cla1 p {
+            display: inline-block;
+            /*改为内联元素*/
+            margin-left: 30px;
+            text-align: left;
+            border: 1px solid #ccc;
+            margin: 20px 30px;
+            padding: 10px;
+            left: 200px;
+        }
+        
+        .cla1 span {
+            left: 50%;
+        }
+        
+        thead {
+            background: black;
+            color: white;
+        }
+        
+        td {
+            width: 300px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            /*单线框*/
+        }
+        
+        table th,
+        td {
+            border: 1px solid #ccc;
+        }
+        
+        tfoot {
+            border-collapse: collapse;
+            background: rgb(99, 96, 96);
+        }
+        
+        .div6 {
+            /*定宽*/
+            border-style: none;
+            width: 600px;
+            margin: 10px auto;
+        }
+        
+        form label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin: 5px 20px;
+        }
+        
+        form>p {
+            color: rgb(138, 135, 135);
+        }
+        
+        #div7 input {
+            background-color: blue;
+            width: 700px;
+            margin: 1px auto;
+            height: 50px;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            background-color: black;
+            height: 40px;
+            line-height: 40px;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="id1">
+        <div id="s1">
+            <img src="baidu.jpg" width="150" height="50" />
+        </div>
+        <div id="s2">
+            <ul id="u1">
+                <li><a href="http://www.baidu.com">导航链接1</a></li>
+                <li><a href="http://www.baidu.com">导航链接2</a></li>
+                <li><a href="http://www.baidu.com">导航链接3</a></li>
+                <li><a href="http://www.baidu.com" style="color:#ccc">导航链接4</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br clear="both" />
+
+    <div id="id2">
+        <div id="div1">
+            <h2>文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <p>文章作者 文章发表时间</p>
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落,
+            </p>
+            <p>换行了</p><br />
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+            </p><br />
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+                <a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+                <b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落。
+            </p>
+            <img src="1.jpg" width="300" height="200" />
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+                <a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+                <b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落。
+            </p>
+        </div>
+        <div id="div2">
+            <h2>另一篇文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <p>文章作者 文章发表时间</p>
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落,
+            </p><br />
+            <p>换行了</p>
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+            </p><br />
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+                <a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落，
+                <b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落， 这是一个很长很长的段落。
+            </p>
+            <img src="/E:\研究生\前端\HTML\1.jpg" width="300" height="200" />
+            <ul>
+                <li>列表项目一</li>
+                <li>列表项目二</li>
+                <li>列表项目三</li>
+            </ul>
+        </div>
+        <div id="div3">
+            <h2>图片</h2>
+            <div class="cla1">
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+                <p><span>好看的图片</span><br /><img src="1.jpg" width="100" height="100" /></p><br />
+
+            </div>
+        </div>
+        <div id="div4">
+            <h2>最后一篇文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <p>文章作者 文章发表时间</p>
+            <ol>
+                <li>排名1</li>
+                <li>排名2</li>
+                <li>排名3</li>
+            </ol>
+            <p>下面是一个表格，给表格加了一个border="1"好让你看出是一个表格</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>表头</th>
+                        <th>表头</th>
+                        <th>表头</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td style="text-decoration-line:underline;color:purple">操作</td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td style="text-decoration-line:underline;color:purple">操作</td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td style="text-decoration-line:underline;color:purple">操作</td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td style="text-decoration-line:underline;color:purple">操作</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td>总计</td>
+                        <td colspan="3">1000</td>
+                        <!--colspan合并单元格-->
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div id="div5">
+            <h2>这里以后是一个侧栏，这里是侧栏的标题</h2>
+            <div class="div6">
+                <form method="post">
+                    <label for="email">请输入邮箱地址</label>
+                    <input type="text" value="这是一个文本输入框" id="email" />
+                    <p>邮箱地址请按要求格式输入</p>
+                    <label for="password">请输入密码</label>
+                    <input type="password" value="这是一个文本输入框" id="password" /><br />
+                    <label for="repassword">请重复输入密码</label>
+                    <input type="password" value="这是一个文本输入框" id="repassword" />
+                    <p>密码请为6-16位英文数字</p>
+                    <label for="gender">性别</label>
+                    <input type="radio" value="1" name="gender" id="male" checked="checked" />男
+
+                    <input type="radio" value="2" name="gender" id="female" />女
+
+                    <br />
+                    <label for="city">城市</label>&nbsp;
+                    <select>
+                <option value="北京" selected="selected">北京</option>
+                <option value="上海">上海</option>
+                <option value="广州">广州</option>
+                <option value="南京">南京</option>
+            </select>
+                    <br />
+                    <label for="hobby">爱好</label>
+                    <input type="checkbox" name="checkbox1" value="运动" />运动
+                    <input type="checkbox" name="checkbox2" value="艺术" />艺术
+                    <input type="checkbox" name="checkbox3" value="科学" />科学
+                    <br />
+                    <label>个人描述</label>
+                    <textarea row="5" cols="50">这是一个多行输入框，输入您的个人描述</textarea><br />
+                    <div id="div7"><input type="submit" value="确认提交" name="submitBtn" /></div>
+
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>版权所有</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-China">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="task.css" />
+    <title>任务33:听指令的小方块01</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="chessboard">
+            <div class="col-num">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+            </div>
+            <div class="stage">
+                <div class="row-num">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                </div>
+                <div id="colorblk"></div>
+                <!-- 栅格化 :以x,y轴的方式设置-->
+                <div class="row">
+                    <div class="grid-1"></div>
+                    <div class="grid-2"></div>
+                    <div class="grid-3"></div>
+                    <div class="grid-4"></div>
+                    <div class="grid-5"></div>
+                    <div class="grid-6"></div>
+                    <div class="grid-7"></div>
+                    <div class="grid-8"></div>
+                    <div class="grid-9"></div>
+                    <div class="grid-10"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-11"></div>
+                    <div class="grid-12"></div>
+                    <div class="grid-13"></div>
+                    <div class="grid-14"></div>
+                    <div class="grid-15"></div>
+                    <div class="grid-16"></div>
+                    <div class="grid-17"></div>
+                    <div class="grid-18"></div>
+                    <div class="grid-19"></div>
+                    <div class="grid-20"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-21"></div>
+                    <div class="grid-22"></div>
+                    <div class="grid-23"></div>
+                    <div class="grid-24"></div>
+                    <div class="grid-25"></div>
+                    <div class="grid-26"></div>
+                    <div class="grid-27"></div>
+                    <div class="grid-28"></div>
+                    <div class="grid-29"></div>
+                    <div class="grid-30"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-31"></div>
+                    <div class="grid-32"></div>
+                    <div class="grid-33"></div>
+                    <div class="grid-34"></div>
+                    <div class="grid-35"></div>
+                    <div class="grid-36"></div>
+                    <div class="grid-37"></div>
+                    <div class="grid-38"></div>
+                    <div class="grid-39"></div>
+                    <div class="grid-40"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-41"></div>
+                    <div class="grid-42"></div>
+                    <div class="grid-43"></div>
+                    <div class="grid-44"></div>
+                    <div class="grid-45"></div>
+                    <div class="grid-46"></div>
+                    <div class="grid-47"></div>
+                    <div class="grid-48"></div>
+                    <div class="grid-49"></div>
+                    <div class="grid-50"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-51"></div>
+                    <div class="grid-52"></div>
+                    <div class="grid-53"></div>
+                    <div class="grid-54"></div>
+                    <div class="grid-55"></div>
+                    <div class="grid-56"></div>
+                    <div class="grid-57"></div>
+                    <div class="grid-58"></div>
+                    <div class="grid-59"></div>
+                    <div class="grid-60"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-61"></div>
+                    <div class="grid-62"></div>
+                    <div class="grid-63"></div>
+                    <div class="grid-64"></div>
+                    <div class="grid-65"></div>
+                    <div class="grid-66"></div>
+                    <div class="grid-67"></div>
+                    <div class="grid-68"></div>
+                    <div class="grid-69"></div>
+                    <div class="grid-70"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-71"></div>
+                    <div class="grid-72"></div>
+                    <div class="grid-73"></div>
+                    <div class="grid-74"></div>
+                    <div class="grid-75"></div>
+                    <div class="grid-76"></div>
+                    <div class="grid-77"></div>
+                    <div class="grid-78"></div>
+                    <div class="grid-79"></div>
+                    <div class="grid-80"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-81"></div>
+                    <div class="grid-82"></div>
+                    <div class="grid-83"></div>
+                    <div class="grid-84"></div>
+                    <div class="grid-85"></div>
+                    <div class="grid-86"></div>
+                    <div class="grid-87"></div>
+                    <div class="grid-88"></div>
+                    <div class="grid-89"></div>
+                    <div class="grid-90"></div>
+                </div>
+                <div class="row">
+                    <div class="grid-91"></div>
+                    <div class="grid-92"></div>
+                    <div class="grid-93"></div>
+                    <div class="grid-94"></div>
+                    <div class="grid-95"></div>
+                    <div class="grid-96"></div>
+                    <div class="grid-97"></div>
+                    <div class="grid-98"></div>
+                    <div class="grid-99"></div>
+                    <div class="grid-100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="control">
+            <input id="command" type="text" />
+            <input id="run" type="button" value="执行" /><br>
+        </div>
+    </div>
+    <script type="text/javascript" src="task.js"></script>
+</body>
+
+</html>

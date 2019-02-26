@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="base.css" />
+    <title>任务7：实现常见的技术产品官网的页面架构及样式布局</title>
+</head>
+
+<body>
+    <div class="all">
+        <header>
+            <div class="header-li">
+                <ul>
+                    <li><a href="#jpg/1.jpg">首页</a></li>
+                    <li><a href="#jpg/map1.jpg">最新活动</a></li>
+                    <li><a href="#">项目介绍</a></li>
+                    <li><a href="#">爱心山区</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li>
+                        <div class="header-login"><a href="#"><span>登录</span></a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-book"><img src="jpg/book.JPG" /><span>新世界</span></div>
+            <div class="header-pic">
+                <div class="header-pic-word"><span>Time of new life</span>
+                    <p>新时代，年轻的人们让我们一起</p>
+                    <p>体验新生活，享受新生活</p>
+                    <input type="button" id="Btn" value="开始体验" />
+                </div>
+            </div>
+        </header>
+
+        <div class="section-round">
+            <div class="section-round-round">
+                <div class="section-round-p">
+                    <p>打造全新世界观，让你更爱你的生活</p>
+                </div>
+            </div>
+            <div class="section-round-flag">
+                <div class="section-round-p">
+                    <p>丰富多彩的公益活动，发挥世界的主人公意识</p>
+                </div>
+            </div>
+            <div class="section-round-flower">
+                <div class="section-round-p">
+                    <p>时尚的新理念，超前体验未知的生活</p>
+                </div>
+            </div>
+            <div class="section-round-square">
+                <div class="section-round-pp">
+                    <p>完善的培养机制，培养你全新的世界观</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-book">
+            <div class="section-book-bk">
+                <p>关于新世界，你不知道的还有什么？</p>
+            </div>
+        </div>
+
+        <div class="section-map">
+            <div class="section-map-message">
+                <h3>查找新世界城市活动信息</h3>
+                <p>每个城市的有不同的活动信息，请自主查询您所了解的城市</p>
+                <br />
+                <form>
+                    <!-- 最好用数组-表单级联 -->
+                    <select>
+                        <option value="中国" selected="selected">中国</option>
+                        <option value="英国">英国</option>
+		                <option value="法国">法国</option>
+		                <option value="美国">美国</option>
+                    </select>
+                    <select>
+                        <option value="北京市" selected="selected">北京市</option>
+                        <option value="天津市">天津市</option>
+                        <option value="河北省">河北省</option>
+                        <option value="陕西省">陕西省</option>
+                        <option value="山东省">山东省</option>
+                        <option value="内蒙古自治区">内蒙古自治区</option>
+                    </select>
+                    <select>
+                        <option value="邢台市" selected="selected">邢台市</option>
+                        <option value="保定市">保定市</option>
+                    </select>
+                    <input type="button" id="Btn" value="搜索" />
+                </form>
+            </div>
+        </div>
+        <div class="section-active">
+            <div class="section-active-bj">
+                <img src="jpg/pic1.JPG" />
+                <h5>北京活动</h5>
+                <p>新社区大联盟</p>
+            </div>
+            <div class="section-active-sh">
+                <h3>上海活动</h3>
+                <p>夜上海新景观探索</p>
+                <img src="jpg/pic2.JPG" />
+            </div>
+            <div class="section-active-sz">
+                <img src="jpg/pic3.JPG" />
+                <h5>深圳活动</h5>
+                <p>全新海岸线观点站</p>
+            </div>
+            <div class="section-active-xg">
+                <img src="jpg/pic4.JPG" />
+                <h5>香港活动</h5>
+                <p>奢侈消费大派送</p>
+            </div>
+        </div>
+        <div class="section-newWorld">
+            <div class="section-newWorld-01">
+                <h4>新世界/01</h4>
+                <p>新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界新世界是个新世界 新世界是个新世界新世界是个新世界</p>
+                <div class="section-newWorld-01-more"><a href="#more">更多详情</a></div>
+                <!-- <div id="circle"></div> -->
+            </div>
+            <div class="section-newWorld-pic">
+                <!-- <table>
+                    <tr>
+                        <td id="section-newWorld-pic1"></td>
+                        <td id="section-newWorld-pic2"></td>
+                    </tr>
+                </table> -->
+
+
+                <!-- 三角形用css的radius设置 -->
+                <img src="jpg/Time.JPG" />
+            </div>
+        </div>
+        <div class="section-newLife">
+            <div class="section-newLife-red">
+                <div class="section-newLife-red-word">
+                    <div class="section-newLife-red-ww">
+                        <p>新时代</p>
+                        <p>关于爱生活的我们</p>
+                    </div>
+                    <div class="section-newLife-red-line"></div>
+                    <input type="button" id="Btn" value="查看更多" />
+                </div>
+            </div>
+            <div class="section-newLife-pic"><img src="jpg/subway.JPG" /></div>
+            <div class="section-newLife-more">
+                <div class="section-newLife-more-word">
+                    <div class="section-newLife-more-ww">
+                        <p>新时代</p>
+                        <p>关于爱生活的我们</p>
+                    </div>
+                    <div class="section-newLife-more-line"></div>
+                    <input type="button" id="Btn" value="查看更多" />
+                </div>
+            </div>
+        </div>
+        <div class="section-volunteer">
+            <div class="section-volunteer-tt">
+                <div class="section-volunteer-title">
+                    <h4>成为我们的志愿者</h4>
+                    <div class="section-volunteer-line"></div>
+                    <p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情</p>
+                    <p>那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+                </div>
+                <div class="section-volunteer-message">
+                    <input type="text" value="姓名：" />
+                    <input type="text" value="年龄：" />
+                    <input type="text" value="联系方式：" />
+                    <input type="text" value="联系地址：" />
+                    <input type="textbox" id="input1" value="请简单描述您梦想的生活：" />
+                    <input type="button" id="input2" value="提交申请" />
+                </div>
+                <div class="section-volunteer-rules">
+                    <h4>新世界志愿者协议</h4>
+                    <p>加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，并且本着平等资源的原则......</p>
+                    <a class="s_tico">
+                        <div class="more"></div>
+                        <p>more</p>
+                    </a>
+                    <!-- <input type="hidden" value="sdfsf" /> -->
+                    <h4>新世界志愿者权利</h4>
+                    <p>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的优先参与资格</p>
+                    <a class="s_tico">
+                        <div class="more"></div>
+                        <p>more</p>
+                    </a>
+                    <h4>更多条款</h4>
+                    <a class="s_tico">
+                        <div class="more"></div>
+                        <p>more</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section-contact">
+            <div class="section-contact-content">
+                <h3>联系我们</h3>
+                <p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯</p>
+                <p>也可以通过以下任何方式关注我们的动态</p>
+                <input type="email" id="email" value="someone@email.com" />
+                <input type="button" id="button" value="提交" />
+                <!--怎么消除间隔-->
+                <br />
+                <img src="jpg/qq.JPG" />
+            </div>
+        </div>
+        <footer>
+            <a href="#">Back to top</a>
+            <p>@2016新世界</p>
+        </footer>
+</body>
+
+</html>

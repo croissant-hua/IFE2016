@@ -1,0 +1,126 @@
+body{
+    background-color:#000;
+    margin:0 30px;
+    }
+.header{
+    border-style: none;
+    background-color:rgb(65, 60, 60);
+}
+.head_left{ 
+    float:left;
+    background: black;
+}
+.head_ul{    
+    float:right;
+}
+.head_ul a{
+    text-decoration:none; /*消除下划线*/
+}
+.head_ul a:link{  /*如果已访问过，需要清除历史记录c才能显示设定颜色*/
+    color:#fff;
+}
+.head_ul a:hover{
+    color:#000;
+}
+.head_ul a:visited{ 
+    color:#ccc;
+}
+.head_ul li{
+    float:left;
+    margin-right:25px;
+}
+/* .head_ul a{color:white;} */
+.middle{
+    background: rgb(218, 212, 212);
+    margin:0;
+    padding:0;
+    bottom:0;
+
+    float: left;
+}
+.mid_right{
+    float:right;
+    width:320px;
+}
+.mid_left{
+    margin-right:370px;
+}
+.article_1,.article_2,.pictures,.article_3,.mid_right{
+    background: white;
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right: 2px solid rgb(61, 54, 54);
+    border-bottom: 2px solid rgb(61, 54, 54);
+    margin:10px 10px 20px 10px;
+    padding:10px;
+}
+.picture{border-style:none;}
+.picture p{
+    display:inline-block;   /*改为内联元素*/
+    margin-left:30px;
+    text-align: left;
+    border:1px solid #ccc;
+    margin: 20px 30px; 
+    padding: 10px;
+    left:200px;              
+}
+.picture span{
+    left:50%;
+}
+thead{
+    background: black;
+    color: white;
+}
+td{
+    width:270px;
+}
+.td1 a:link{
+    color:purple;
+}
+.article_3 table{
+    border-collapse:collapse;   /*单线框*/
+}
+.article_3 table th,td{
+    border:1px solid #ccc;
+}
+tfoot{
+    border-collapse: collapse;
+    background: rgb(99, 96, 96);
+}
+.side{      /*定宽*/
+    border-style: none;
+    width:300px;
+    margin: 10px auto;
+}
+form label{           
+    display: inline-block;
+    width:100px;
+    text-align: right;
+    margin: 5px 10px;
+    font-size: 2px;
+}
+.side form>p{
+    color: rgb(138, 135, 135);
+    font-size:2px;
+    text-align:right;
+    margin-right: 20px;
+}
+
+.side .Btn{ 
+    width:260px;
+    margin: 0 auto;    
+}
+.Btn input{
+    background-color: blue;
+    height:40px;
+    width:260px;
+}
+.footer{       
+    text-align:center;
+    color:white;
+    background:black;
+    line-height: 40px;
+}
+.footer p{
+    margin:0;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务23：JavaScript和树(二)</title>
+    <style type="text/css">
+        body * {
+            box-sizing: border-box;
+        }
+        
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #000;
+            max-width: 1600px;
+            margin: 20px 10px;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        /* 每层都加上颜色，易于辨别 */
+        
+        #root {
+            margin: 150px auto;
+            border-color: #f00;
+        }
+        
+        .two {
+            height: 220px;
+            border-color: aqua;
+        }
+        
+        .three {
+            height: 150px;
+            border-color: #f0f;
+        }
+        
+        .four {
+            height: 100px;
+            border-color: #0f0;
+        }
+        
+        .five {
+            height: 50px;
+            border-color: #000;
+        }
+        
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        p button {
+            margin: 10px;
+        }
+        
+        .inputT {
+            display: flex;
+            flex-wrap: wrap;
+            width: 550px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root" class="one">Supper
+        <div class="two">Cat
+            <div class="three">Apple
+                <div class="four">poor</div>
+                <div class="four">pig</div>
+                <div class="four">cola</div>
+                <div class="four">Soccer</div>
+            </div>
+            <div class="three">phone</div>
+            <div class="three">color
+                <div class="four">Book</div>
+                <div class="four">School</div>
+            </div>
+        </div>
+        <div class="two">Note
+            <div class="three">Human
+                <div class="four">Code</div>
+                <div class="four">operate</div>
+                <div class="four">pig</div>
+            </div>
+            <div class="three">program
+                <div class="four">bement
+                    <div class="five">cat</div>
+                </div>
+                <div class="four">glass</div>
+            </div>
+        </div>
+        <div class="two">Fish</div>
+    </div>
+
+    <fieldset class="inputT">
+        <p>
+            <button id="DFS">深度优先搜索</button>
+            <button id="BFS">广度优先搜索</button>
+        </p>
+        <label>请输入要查询的内容，然后点击上面的按钮：<input id="search" type="text" value="" /></label>
+    </fieldset>>
+
+
+    <script type="text/javascript" src="task.js"></script>
+</body>
+
+</html>

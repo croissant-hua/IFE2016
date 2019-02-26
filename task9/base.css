@@ -1,0 +1,744 @@
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: "SimHei", "Microsoft Yahei", "Arial";
+    background: #000;
+}
+
+body * {
+    /* 为元素指定的任何内边距和
+    边框都将在已设定的宽度和高度内进行绘制。
+    通过从已设定的宽度和高度分别减去边框
+    和内边距才能得到内容的宽度和高度。 */
+    box-sizing: border-box;
+}
+
+header {
+    /* width: */
+    height: 60px;
+    margin-bottom: 1px;
+    background: #0086b3;
+}
+
+.inHeader {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* !important强调重要性 */
+
+.icon-app {
+    float: left;
+    font-size: 40px !important;
+    color: #fff;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.search {
+    float: right;
+    margin: 15px;
+    padding-right: 40px;
+}
+
+.searchbar {
+    margin-right: 20px;
+    width: 280px;
+    height: 25px;
+    /* 椭圆 */
+    border-radius: 25px;
+    background: url(image/search.png) no-repeat 2% 50% #fff;
+    /* 背景图标太大，b-size调整 */
+    background-size: 20px;
+    /* outline去掉原始方形边框 */
+    outline: none;
+    /* padding-left:在搜索图标右边输入 */
+    padding-left: 30px;
+}
+
+a {
+    /* 去掉下划线 */
+    text-decoration: none;
+}
+
+.icon-people3 {
+    color: #fff;
+}
+
+.main {
+    width: 1300px;
+    margin: 0 auto;
+    height: 1400px;
+}
+
+.left {
+    float: left;
+    width: 260px;
+    height: 1400px;
+    color: #fff;
+    background: #3D3D3D;
+}
+
+.user {
+    width: 100%;
+    height: auto;
+    padding: 20px 40px;
+}
+
+.user * {
+    margin: 5px;
+}
+
+
+/* 用flex的布局格式使之水平对齐 */
+
+.user>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pic {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.tab {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.tab .tr {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    color: lightgray;
+}
+
+.tr:hover {
+    background: #5d5d5d;
+    color: #fff;
+}
+
+.tr>i {
+    width: 30%;
+    /* padding-left: 50px; */
+    text-align: right;
+}
+
+.tr>span {
+    width: 70%;
+    padding-left: 20px;
+    text-align: left;
+    /* display: flex;
+    justify-content: flex-start; */
+}
+
+.right {
+    width: 1040px;
+    height: 1400px;
+    margin-left: 260px;
+    background: #eeeded;
+}
+
+.rightHeader {
+    height: 40px;
+    background: #fff;
+    padding: 10px 30px;
+}
+
+.rightHeader a {
+    color: #aaa;
+    margin: 0 7px;
+}
+
+.rightHeader a:hover {
+    color: #0086b3;
+}
+
+.rightHeader a.cur {
+    color: #0086b3;
+}
+
+.right-content {
+    width: 1000px;
+    margin: 10px auto;
+    height: 1100px;
+}
+
+.searchList,
+.historySearch,
+.volumeList {
+    width: 950px;
+    margin: 20px auto;
+    height: 80px;
+}
+
+.searchList {
+    display: flex;
+    justify-content: flex-start;
+    background: #fff;
+}
+
+.searchList div {
+    margin: 10px;
+}
+
+.searchList span {
+    color: #aaa;
+    padding: 0 10px 0 15px;
+}
+
+.searchList select {
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 3px;
+    /* 移除原生样式 */
+    -webkit-appearance: none;
+    /* scroll滚动条，right/90%表示左右位置
+    center为上下位置 */
+    background: url(image/unfold.png) no-repeat scroll 90% center #fff;
+    background-size: 12px;
+}
+
+.searchList .sear-first {
+    padding-top: 5px;
+}
+
+.searchList .sear {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sear-first select {
+    width: 70px;
+}
+
+.sear-comp {
+    width: 181px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sear-comp div {
+    margin: 0;
+}
+
+.sear-comp .change {
+    padding-top: 10px;
+}
+
+.sear-comp select {
+    width: 100px;
+}
+
+.sear-time {
+    width: 350px;
+}
+
+.sear-time .s1,
+.s4 {
+    width: 140px;
+}
+
+.sear-time .s2,
+.s3 {
+    width: 60px;
+}
+
+.searchList .sear-bt {
+    line-height: 60px;
+}
+
+.sear-bt button {
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    color: #fff;
+    border-radius: 3px;
+    background: #388ac1;
+    border: none;
+}
+
+.sear-bt button:hover {
+    background: #0086b3;
+}
+
+.historySearch {
+    display: flex;
+    text-align: center;
+}
+
+.historySearch [class*='flex-sf'] {
+    cursor: pointer;
+    background: #fff;
+    margin-right: 8px;
+    box-shadow: 0 0 3px #ababab;
+    padding: 15px 0 10px 0;
+}
+
+.historySearch .flex-sf-1 {
+    flex: 1;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.historySearch .flex-sf-2 {
+    flex: 4;
+}
+
+.historySearch .flex-sf-2:hover {
+    border-top: 5px solid #2189bf;
+}
+
+.historySearch .flex-sf-3 {
+    flex: 6;
+    margin-right: 0;
+}
+
+.historySearch [class*='flex-sf']>strong {
+    display: inline-block;
+    color: #f00;
+    font-size: 25px;
+    margin: 15px 0 0 0;
+}
+
+.historySearch [class*='flex-sf']>strong b {
+    color: #949494;
+    font-size: 20px;
+}
+
+.his-search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.his-search>img {
+    width: 30px;
+    margin: 0 10px 0 20px;
+    height: 30px;
+}
+
+.volumeList {
+    height: 100px;
+}
+
+.volumeList p {
+    margin: 10px 0;
+}
+
+.volumelistContent {
+    display: flex;
+    height: 70px;
+}
+
+.volumelistContent [class*='volume-sf'] {
+    cursor: pointer;
+    margin-right: 30px;
+    background: #fff;
+    flex: 4;
+}
+
+.volumelistContent .volume-number {
+    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 20px;
+}
+
+.volume-number span {
+    margin: 5px;
+}
+
+.volume-sf-first {
+    border-left: 5px solid rgb(11, 223, 141);
+}
+
+.volume-sf-second {
+    border-left: 5px solid rgb(0, 119, 255);
+}
+
+.volume-sf-third {
+    border-left: 5px solid #f00;
+}
+
+.volume-sf-forth {
+    border-left: 5px solid rgb(170, 214, 10);
+}
+
+.volumelistContent .colorBox1,
+.colorBox2,
+.colorBox3,
+.colorBox4 {
+    float: right;
+    width: 60px;
+    height: 50px;
+    margin: 10px;
+}
+
+.colorBox1 {
+    background: rgb(11, 223, 141);
+}
+
+.colorBox2 {
+    background: rgb(0, 119, 255);
+}
+
+.colorBox3 {
+    background: #f00;
+}
+
+.colorBox4 {
+    background: rgb(170, 214, 10);
+}
+
+.volumelistContent .volume-sf-forth {
+    margin-right: 0;
+}
+
+.project,
+.calendarAndCar {
+    margin: 20px 25px;
+    /* rem中，元素的字体大小取决于根，或者说html元素
+    可以在html元素上定义一个字体大小,
+    定义所有的rem单位都是它的百分比 */
+    /* font-size: .75rem; */
+}
+
+.firstProject,
+.secProject,
+.calendar,
+.car {
+    border-radius: 10px;
+    height: 380px;
+    border: 1px solid rgb(88, 88, 88);
+    background: #fff;
+    overflow: hidden;
+}
+
+.proHeader {
+    height: 45px;
+    background: #f4f6f7;
+}
+
+.proHeader span {
+    line-height: 45px;
+    margin: 0 20px;
+}
+
+.firstProject {
+    float: left;
+    width: 530px;
+}
+
+.firstProject .proMain {
+    position: relative;
+    padding: 10px 20px;
+}
+
+.firstProject .proMain ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.firstProject .proMain ul li {
+    /* inline-block设置水平排列
+    inlline-block既有块元素属性又有行内元素属性 */
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.firstProject .proMain ul li span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #ededf0;
+    z-index: 1;
+}
+
+.firstProject .proMain ul li .tab {
+    display: none;
+    position: absolute;
+    top: 31px;
+    width: 480px;
+    height: 230px;
+    padding: 40px;
+    margin: 0;
+    border: 1px solid #aaa;
+    z-index: 0;
+    border-radius: 0 10px 10px 10px;
+}
+
+.firstProject .proMain ul li .tab table {
+    width: 100%;
+    text-align: center;
+}
+
+.firstProject .proMain ul li .tab table td {
+    border: 1px solid #aaa;
+}
+
+.firstProject .proMain ul li .tab table td:hover {
+    background-color: #ededf0;
+}
+
+.firstProject .proMain ul li .tab.item-2 {
+    /* table表格重叠放置，并与tab出现一致 */
+    margin-left: -76px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.firstProject .proMain ul li .tab.item-3 {
+    margin-left: -153px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.firstProject .proMain ul li .tab.item-4 {
+    margin-left: -230px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.firstProject .proMain ul li .tab.item-5 {
+    margin-left: -307px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.firstProject .proMain ul li input {
+    /* input位置与li位置保持一致 。
+    将li设置为relative,
+    将input设置为absolute */
+    position: absolute;
+    /* 将li圆圈设置为透明*/
+    opacity: 0;
+    /* 扩大li可点击范围 */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+.firstProject .proMain ul li input:hover {
+    cursor: pointer;
+}
+
+.firstProject .proMain ul li input:checked+span {
+    /* 设置tab与table显示内容一致 */
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.firstProject .proMain ul li input:checked+span+.tab {
+    /*  设置tab与table作为整体块显示*/
+    display: block;
+}
+
+.firstProject .proMain ul li input:checked+span+.tab+.shade {
+    display: block;
+}
+
+.secProject {
+    margin-left: 550px;
+    width: 400px;
+}
+
+.secProject .content2 {
+    padding: 10px 50px 20px;
+}
+
+.secProject .content2 table tr {
+    display: block;
+    width: 300px;
+    margin: 5px;
+}
+
+.secProject .content2 table .price {
+    border-top: 1px solid #ababab;
+    border-bottom: 1px solid #ababab;
+}
+
+.secProject .content2 table .discribe {
+    height: 130px;
+}
+
+.secProject .content2 table .secret {
+    border-top: 1px solid #ababab;
+}
+
+
+/* type以text开头的所有元素 */
+
+.secProject .content2 input[type^='text'] {
+    display: block;
+    border: none;
+    outline: none;
+    margin: 5px auto;
+}
+
+.secProject .content2 table .secret .bt2 {
+    margin-left: 136px;
+}
+
+.calendar {
+    float: left;
+    width: 400px;
+}
+
+.car {
+    margin-left: 420px;
+    width: 530px;
+}
+
+.calendar .calMain {
+    padding: 10px 20px;
+}
+
+.calendar .calMain .week table {
+    width: 100%;
+    text-align: center;
+}
+
+.calendar .calMain .selectList>select {
+    width: 85px;
+    height: 24px;
+}
+
+.calendar .calMain .selectList button {
+    background-color: #fff;
+    outline: none;
+}
+
+.calendar .calMain .tableList {
+    width: 100%;
+    text-align: center;
+}
+
+.calendar .calMain .tableList td {
+    height: 40px;
+    padding: 5px;
+}
+
+.calendar .calMain .tableList .weekend,
+.festival>span {
+    color: #f00;
+}
+
+.calMain .tableList .weekend span {
+    color: #000;
+}
+
+.calendar .calMain .tableList td:hover {
+    border-radius: 10px;
+    background-color: #388ac1;
+}
+
+.carMain {
+    padding: 20px 50px;
+}
+
+.carMain .carRank {
+    width: 100%;
+    text-align: center;
+}
+
+.car .carMain .carRank .car-tr,
+.rank,
+.name,
+.hot {
+    height: 25px;
+    border: 1px solid #ababab;
+}
+
+.carMain .carRank .rank,
+.name {
+    width: 20%;
+}
+
+.carMain .carRank .hot {
+    width: 60%;
+}
+
+.carMain .carRank tr:hover {
+    cursor: pointer;
+    background: #ababab;
+}
+
+.carMain .carRank .bar {
+    /* 设置为块内元素，使水平对齐 */
+    display: inline-block;
+    width: 60%;
+    height: 5px;
+    background: #ededf0;
+}
+
+.carMain .carRank .bar .bar-fill {
+    display: block;
+    height: 100%;
+}
+
+.carMain .carRank .bar .bar1 {
+    width: 80%;
+    background-color: #f00;
+}
+
+.carMain .carRank .bar .bar2 {
+    width: 75%;
+    background-color: rgb(255, 123, 0);
+}
+
+.carMain .carRank .bar .bar3 {
+    width: 70%;
+    background-color: rgb(255, 187, 0);
+}
+
+.carMain .carRank .bar .bar4 {
+    width: 65%;
+    background-color: rgb(123, 255, 0);
+}
+
+.carMain .carRank .bar .bar5 {
+    width: 60%;
+    background-color: rgb(0, 255, 221);
+}
+
+.carMain .carRank .bar .bar6 {
+    width: 55%;
+    background-color: rgb(0, 119, 255);
+}
+
+.carMain .carRank .bar .bar7 {
+    width: 50%;
+    background-color: rgb(162, 0, 255);
+}
+
+.carMain .carRank .bar .bar8 {
+    width: 45%;
+    background-color: rgb(255, 0, 242);
+}
+
+.carMain .carRank .bar .bar9 {
+    width: 40%;
+    background-color: rgb(255, 0, 140);
+}
+
+.carMain .carRank .bar .bar10 {
+    width: 35%;
+    background-color: rgb(140, 0, 255);
+}
